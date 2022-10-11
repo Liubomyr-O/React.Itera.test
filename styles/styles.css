@@ -45,6 +45,17 @@ button.confirm {
   background-color: rgb(16, 118, 59);
 }
 
+img.final {
+  display: block;
+  margin: auto;
+}
+
+img.final {
+  margin-top: 70px;
+  width: 175px;
+  height: 175px;
+}
+
 /* Form styles */
 
 .emailForm {
@@ -72,6 +83,10 @@ button.confirm {
   color: #af1dff;
 }
 
+.hide {
+  display: none;
+}
+
 /* Modal window styles */
 
 .modal {
@@ -94,6 +109,8 @@ button.confirm {
   justify-content: center;
   height: 100vh;
   width: 100%;
+  visibility: visible;
+  transition: all 0.5s ease-in-out;
 }
 
 .modalWindow {

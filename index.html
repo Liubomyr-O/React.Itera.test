@@ -13,19 +13,21 @@
   <body>
     <div>
       <header>
-        <div>
+        <div class="header">
           <h1>Itera test task by Liubomyr Olianych</h1>
           <h3>Please fill out the registration form</h3>
         </div>
       </header>
 
-      <div class="emailForm" id="emailForm" data-target="toForm">
+      <!-- email form  -->
+      <div class="emailForm" id="emailForm">
         <form>
           <h3>Create an account</h3>
           <p class="formInputTitles">Email (required)</p>
           <p>
             <input
               type="email"
+              id="email"
               maxlength="30"
               name="email"
               class="textField email"
@@ -35,26 +37,40 @@
           <p>
             <input
               type="password"
-              name="pass"
-              class="textField password"
+              name="password"
+              id="password"
+              class="password textField"
               required
             />
           </p>
-          <button class="btn submit" data-path="confirmation">submit</button>
+          <button type="submit" class="btn submit">submit</button>
         </form>
       </div>
+      <!-- end of email form  -->
 
+      <!-- Modal window  -->
       <div class="modal">
         <div class="modalOverlay">
-          <div class="modalWindow" data-target="confirmation">
-            <h3>Please confirm account creation</h3>
-            <button class="btn cancel" data-path="toForm">cancel</button>
-            <button class="btn confirm" data-path="toResult">confirm</button>
+          <div class="modalWindow">
+            <h3>
+              Please confirm account creation
+              <span class="emailToConfirm"></span>
+            </h3>
+            <button type="reset" class="btn cancel">cancel</button>
+            <button class="btn confirm">confirm</button>
           </div>
         </div>
       </div>
+      <!-- End of modal window  -->
 
-      <div class="result"></div>
+      <!-- result block  -->
+      <div class="result hide">
+        <h2>Hello user with email: <span class="emailConfirmed"></span></h2>
+        <div class="image">
+          <img class="final" src="img/welcome.gif" alt="welcome image" />
+        </div>
+      </div>
+      <!-- End of result block  -->
     </div>
   </body>
 </html>
